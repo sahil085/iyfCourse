@@ -4,10 +4,18 @@
       <img src="https://res.cloudinary.com/dnuq1lgqs/image/upload/v1590938985/For_queries_Contact_Harsh_8375818918_2_xj3h8g.png"
            alt="Inner Development through Vedic Wisdom"/>
       <div class="form-container">
-        <p></p>
-        <input [(ngModel)]="email" [required]="true" placeholder="Email">
-        <input [(ngModel)]="number" [required]="true" placeholder="Contact number">
-        <button (click)="onSubmit()">Submit</button>
+
+        <p style="font-size: 20px;letter-spacing: 3px"> ISKCON YOUTH FORUM thanks you for registering in the course </p>
+        <input type="email"  [(ngModel)]="email" required placeholder="Email">
+        <input type="number"   pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"  [(ngModel)]="number" required placeholder="Contact number">
+        <button type="button" style="cursor: pointer" (click)="onSubmit()">Submit</button>
+        <div style="font-size: 20px;letter-spacing: 3px">
+          <strong>Note: </strong> If you face any issue while verifying the details then please feel free to contact us on Whatsapp.    Sahil: 8920041231 /
+          Harsh: 8375818918
+          <hr/>
+          IYF is aimed towards nourishing the hearts of today's youth with the sublime message of the scriptures and helping them flourish in their lives in a wholesome manner.
+
+        </div>
       </div>
     </div>
     <div class="message">Loading Content. Please wait...</div>
