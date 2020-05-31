@@ -13,6 +13,7 @@ export class AppComponent {
   public number: number;
   public email: string;
   courseApiUrl = `${environment.apiUrl}/iyf/register`;
+  loading = false;
 
   constructor(private http: HttpClient) {
   }
@@ -26,12 +27,16 @@ export class AppComponent {
     } else if (this.email && !this.validateEmail(this.email)) {
       alert('Email is not valid');
     } else {
+      this.loading = true;
       this.http.post<CommonResponse>(this.courseApiUrl, {email: this.email, mobileNumber: this.number})
         .subscribe(resp => {
+          this.loading = false;
           if (resp.successMessage) {
+            this.number = undefined;
+            this.email = undefined;
             alert('Thanks for verifying details. Session details will sent to your registered mobile number');
           }
-          if(resp.errorMessage) {
+          if (resp.errorMessage) {
             alert('Oops..! some error occured please try again');
           }
         });
