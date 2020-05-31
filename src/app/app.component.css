@@ -1,0 +1,64 @@
+.banner-image {
+  margin: auto;
+  min-height: 250px;
+  background: #333333;
+  border-radius: 4px;
+  position: relative;
+}
+
+.message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white;
+  font-size: 21px;
+}
+
+.banner-image > .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.banner-image img {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .banner-image {
+    width: 90%;
+  }
+}
+
+@media (min-width: 768px) {
+  .banner-image {
+    width: 60%;
+  }
+}
+
+.form-container {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form-container > input, button {
+  width: 300px;
+  margin: 10px 0;
+  padding: 16px 24px;
+  font-size: 21px;
+  border-radius: 30px;
+  border: 1px solid #333;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+
+.background {
+  background: #0aa;
+}
